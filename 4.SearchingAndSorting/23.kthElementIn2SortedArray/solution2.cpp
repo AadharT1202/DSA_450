@@ -2,7 +2,6 @@
 using namespace std;
 
 
- // } Driver Code Ends
 class Solution{
     public:
     int kthElement(int arr1[], int arr2[], int n, int m, int k)
@@ -43,9 +42,7 @@ class Solution{
     }
 };
 
-// { Driver Code Starts.
  
-// Driver code
 int main()
 {
 	int t;
@@ -63,4 +60,4 @@ int main()
         cout << ob.kthElement(arr1, arr2, n, m, k)<<endl;
 	}
     return 0;
-}  // } Driver Code Ends
+}

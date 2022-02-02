@@ -54,6 +54,4 @@ int main()
         cout<<x2<<endl;
     else
         cout<<-1<<endl;
-    int a = sqrt(3);
-    cout<<a;
 }

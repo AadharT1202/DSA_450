@@ -36,6 +36,6 @@ int main()
     vector<pair<int, int> > ans = subArray(arr,n);
     for(int i=0; i<ans.size(); i++)
     {
-        cout<<ans[i].first<<" "<<ans[i].second<<endl;
+        cout<<ans[i].first<<" "<<ans[i].second <<endl;
     }
 }

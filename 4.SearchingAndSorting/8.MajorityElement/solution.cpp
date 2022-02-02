@@ -26,7 +26,6 @@ int majorityElement(int a[], int size)
         return a[maj_index];
     else
         return -1;
-
     
 }
 int main()
