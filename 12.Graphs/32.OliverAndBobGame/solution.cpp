@@ -11,14 +11,15 @@ void resize(int n)
     outTime.resize(n+1);
 }
 
-void dfs(int src, int par, vector<int> g[])
+void dfs(int src, vector<int>&visited, vector<int> g[])
 {
+    visited[src]=1;
     inTime[src] = timer++;
     for(int i=0; i<g[src].size(); i++)
     {
         int cur = g[src][i];
-        if(cur!=par)
-            dfs(cur,src,g);
+        if(!visited[cur])
+            dfs(cur,visited,g);
     }
     outTime[src] = timer++;
 }
@@ -37,14 +38,26 @@ int main()
     timer=1;
     resize(n);
     vector<int> g[n+1];
-    for(int i=1; i<=n; i++)
+    for(int i=1; i<n; i++)
     {
         int x,y;
         cin>>x>>y;
         g[x].push_back(y);
         g[y].push_back(x);
     }
-    dfs(1,0,g);
+
+    for(int i=1; i<n; i++)
+    {
+        cout<<i<<"--> ";
+        for(int j=0; j<g[i].size(); j++)
+        {
+            cout<<g[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
+    vector<int> visited(n+1,0);
+
+    dfs(1,visited,g);
     int q;
     cin>>q;
     for(int i=0; i<q; i++)
@@ -57,7 +70,7 @@ int main()
             continue;
         }
 
-        if(type==0)
+        if(type==1)
         {
             if(check(x,y))
                 cout<<"Yes\n";
@@ -65,7 +78,7 @@ int main()
                 cout<<"No\n";
         }
 
-        else if(type==1)
+        else if(type==0)
         {
             if(check(y,x))
                 cout<<"Yes\n";
