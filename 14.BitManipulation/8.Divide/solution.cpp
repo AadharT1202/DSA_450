@@ -1,16 +1,16 @@
 #include<iostream>
 using namespace std;
 
-int division(long long divisor, long long divident)
+int division(long long divisor, long long dividend)
 {
     int sign = 1;
     if(divisor<0)
         sign *= -1;
-    if(divident<0)
+    if(dividend<0)
         sign *= -1;
-            
+
     long long n,m;
-    n = abs(divident);
+    n = abs(dividend);
     m = abs(divisor);
     long long q = 0;
     long long t = 0;
@@ -32,11 +32,11 @@ int division(long long divisor, long long divident)
 
 int main()
 {
-    long long divisor, divident;
-    cout<<"Enter the divident: ";
-    cin>>divident;
+    long long divisor, dividend;
+    cout<<"Enter the dividend: ";
+    cin>>dividend;
     cout<<"Enter the divisor: ";
     cin>>divisor;
-    cout<<"Quotient is: "<<division(divisor,divident)<<endl;
+    cout<<"Quotient is: "<<division(divisor,dividend)<<endl;
 
 }
