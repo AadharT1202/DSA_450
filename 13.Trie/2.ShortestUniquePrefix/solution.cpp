@@ -9,10 +9,6 @@ struct TrieNode{
     struct TrieNode *children[26];
 };
 
-struct rootNode{
-    struct TrieNode *children[26];
-};
-
 struct TrieNode* getNode()
 {
     struct TrieNode* temp = new TrieNode;
