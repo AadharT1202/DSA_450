@@ -12,7 +12,7 @@ struct TrieNode{
 struct TrieNode* getNode()
 {
     struct TrieNode *temp =  new TrieNode;
-    temp->wordEndCount++;
+    temp->wordEndCount = 0;
     for(int i=0; i<Alphabet_Size; i++)
     {
         temp->children[i] = NULL;
