@@ -6,7 +6,6 @@ int findMissingUtil(int arr[], int low, int high, int diff)
     while (low <= high)
     {   
         mid = (low + high) / 2;
-        cout<<"High: "<<high<<" "<<"Low: "<<low<<" "<<"Mid: "<<mid<<endl;
         if ((arr[mid] - arr[0]) / diff == mid)
             low = mid + 1;
         else

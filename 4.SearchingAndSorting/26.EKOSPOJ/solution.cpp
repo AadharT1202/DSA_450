@@ -25,7 +25,6 @@ int solve(int *arr, int N, int M)
         if(isWood(mid,arr,N,M))
         {
             ans=mid;
-            cout<<ans<<endl;
             low=mid+1;
         }
         else    

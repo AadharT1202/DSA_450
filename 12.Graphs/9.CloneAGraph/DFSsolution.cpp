@@ -72,6 +72,6 @@ int main()
     for(int i=0; i<n1.size(); i++)
         cout<<n1[i]->val<<" ";
     cout<<endl;
-
+    //similarly we can check for other nodes as well;
 
 }

@@ -71,3 +71,5 @@ int main()
 
     cout<<determinant(mat,3)<<endl;
 }
+
+//This code finds the determinant of 3*3 matrix only...

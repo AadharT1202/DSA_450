@@ -16,6 +16,10 @@ bool isValid(int x, int y, int rows, int cols)
 
 void floodFill(int sr, int sc, int rows, int cols, int oldColor, int newColor, vector<vector<int> >&image)
 {
+
+    if(image[sr][sc]==newColor)
+        return;
+
     vector<vector<bool> >visited(rows, vector<bool>(cols,false));
     queue<pair<int,int> > q;
     q.push(make_pair(sr,sc));

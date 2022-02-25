@@ -10,7 +10,7 @@ void adjList(int v, int e)
         int u,v;
         cin>>u>>v;
         graph[u].push_back(v);
-        //graph[v].push_back(u);
+        graph[v].push_back(u);
     }
     cout<<"Adjacency List is as below: "<<endl;
     for(int i=0; i<v; i++)
@@ -60,7 +60,7 @@ int main()
     int v,e;
     cout<<"Enter number of vertices and edges: "<<endl;
     cin>>v>>e;
-    //adjMatrix(v,e);
-    //cout<<endl;
+    adjMatrix(v,e);
+    cout<<endl;
     adjList(v,e);
 }

@@ -74,3 +74,34 @@ int main()
         cout<<ans[i]<<" ";
     cout<<endl;
 }
+
+
+/*
+example 1: Input: N = 10, E = 13, Below is the given graph
+0 2
+0 3
+0 4
+1 2
+1 7
+1 8
+2 5 
+3 5
+3 7
+4 7
+5 6
+6 7
+7 9
+
+output: 1 1 2 2 2 3 4 5 2 6 
+
+example 2: Input: N = 7, E = 7, Below is the given graph
+0 1
+1 2
+1 3
+1 4
+2 5
+3 5
+4 6
+
+output: 1 2 3 3 3 4 4 
+*/

@@ -50,7 +50,6 @@ string findOrder(int n, int k, vector<string> &dict)
         int x = q.front();
         char temp = x + 'a';
         q.pop();
-        cout<<temp<<endl;
         ans += temp;
         for(int i=0; i<graph[x].size(); i++)
         {

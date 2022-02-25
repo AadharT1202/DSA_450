@@ -1,3 +1,7 @@
+/*link to the problem
+https://practice.geeksforgeeks.org/problems/the-painters-partition-problem1535/1/#
+*/
+
 #include<iostream>
 using namespace std;
 bool isValid(int x, int k, int arr[], int n)
@@ -14,7 +18,6 @@ bool isValid(int x, int k, int arr[], int n)
         else
             sum+=arr[i];
     }
-    cout<<"Count: "<<count<<endl;
     return (count<=k);
 }
 
@@ -29,7 +32,6 @@ long long minTime(int arr[], int n, int k)
     while(low<=high)
     {
         long long mid=(low+high)/2;
-        cout<<"Low: "<<low<<" "<<"Mid: "<<mid<<" "<<"High: "<<high<<endl; 
         if(isValid(mid,k,arr,n))
         {
             result=mid;
