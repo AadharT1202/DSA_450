@@ -87,3 +87,30 @@ int main()
         cout<<endl;
     }
 }
+/* test case
+Input: 
+n = 3
+contact[] = {"geeikistest", "geeksforgeeks", 
+"geeksfortest"}
+s = "geeips"
+Output:
+geeikistest geeksforgeeks geeksfortest
+geeikistest geeksforgeeks geeksfortest
+geeikistest geeksforgeeks geeksfortest
+geeikistest
+0
+0
+Explaination: By running the search query on 
+contact list for "g" we get: "geeikistest", 
+"geeksforgeeks" and "geeksfortest".
+By running the search query on contact list 
+for "ge" we get: "geeikistest" "geeksforgeeks"
+and "geeksfortest".
+By running the search query on contact list 
+for "gee" we get: "geeikistest" "geeksforgeeks"
+and "geeksfortest".
+By running the search query on contact list 
+for "geei" we get: "geeikistest".
+No results found for "geeip", so print "0". 
+No results found for "geeips", so print "0".
+*/
