@@ -19,7 +19,7 @@ Node * getNode(int val)
     return temp;
 }
 
-//code to do the level order traversal.
+//code to do the reverse level order traversal.
 //https://practice.geeksforgeeks.org/problems/reverse-level-order-traversal/1
 //link to the probelem.
 vector<int> reverseLevelOrder(Node *root)
