@@ -17,7 +17,7 @@ Node * getNode(int val)
     return temp;
 }
 
-void inorderIterative(Node *root)
+void preorderIterative(Node *root)
 {
     stack<Node *> s;
     s.push(root);
@@ -58,7 +58,7 @@ int main()
     root->right->left->left = getNode(7);
     root->right->left->right = getNode(8);
  
-    inorderIterative(root);
+    preorderIterative(root);
     cout<<endl;
     return 0;
 }
