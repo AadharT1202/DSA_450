@@ -3,40 +3,33 @@
 #include<vector>
 using namespace std;
 
-vector<int> NGE(vector<int> v, int n)
+vector<long long> nextLargerElement(vector<long long> arr, int n)
 {
-    vector<int> nge;
-    stack<int> st;
-    for(int i=0; i<n; i++)
+    stack<long long>s;
+    vector<long long>v;
+    for(long long i=n-1;i>=0;i--)
     {
-        if(st.empty())
-            st.push(i);
+        while(!s.empty() && s.top()<=arr[i])
+        {
+            s.pop();
+        }
+        if(s.empty())
+        {
+            v.push_back(-1);
+        }
         else
         {
-            if(v[i] <= v[st.top()])
-                st.push(i);
-            else
-            {
-                while(!st.empty() && v[i]>v[st.top()])
-                {
-                    nge[st.top()] = v[i];
-                    st.pop();
-                }
-                st.push(i);
-            }
+            v.push_back(s.top());
         }
+        s.push(arr[i]);
     }
-    while(!st.empty())
-    {
-        nge[st.top()] = -1;
-        st.pop();
-    }
-    return nge;
+    reverse(v.begin(),v.end());
+    return v;
 }
 
 int main()
 {
-    vector<int> v;
+    vector<long long> v;
     int n;
     cout<<"Enter the number of elements";
     cin>>n;
@@ -46,7 +39,7 @@ int main()
         cin>>x;
         v.push_back(x);
     }
-    vector<int> sol = NGE(v,n);
+    vector<long long> sol = nextLargerElement(v,n);
     for(int i=0; i<n; i++)
     {
         cout<<sol[i]<<" ";
