@@ -66,7 +66,7 @@ int main()
 
 	// calls the function to find out the
 	// k-th largest sum
-	cout << kthLargestSum(a, n, k);
+	cout << kthLargestSum(a, n, k)<<endl;
 	return 0;
 }
 
